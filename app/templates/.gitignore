@@ -1,0 +1,14 @@
+# Ignore both ht files because of password block in htaccess
+.htaccess
+.htpasswd
+
+.idea
+.tmp
+.scssc
+.codekit
+
+wp-config.php
+wp-content/uploads/*
+
+node_modules
+bower_components
