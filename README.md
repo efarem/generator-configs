@@ -1,2 +1,2 @@
-# redesigned-waffle
-Yeoman generator for web dev projects tailored to the Digital Results workflow
+# Config File Generator
+Yeoman generator for commonly used config files
