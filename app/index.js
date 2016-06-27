@@ -107,8 +107,8 @@ module.exports = yo.Base.extend({
         switch (this.ecmaversion) {
           case 6:
             this.fs.copyTpl(
-              this.templatePath('es6/.eslintrc.json'),
-              this.destinationPath('.eslintrc.json')
+              this.templatePath('es6/.eslintrc'),
+              this.destinationPath('.eslintrc')
             );
             this.fs.copyTpl(
               this.templatePath('es6/.babelrc'),
@@ -117,8 +117,8 @@ module.exports = yo.Base.extend({
             break;
           default:
             this.fs.copyTpl(
-              this.templatePath('es5/.eslintrc.json'),
-              this.destinationPath('.eslintrc.json')
+              this.templatePath('es5/.eslintrc'),
+              this.destinationPath('.eslintrc')
             );
             this.fs.copyTpl(
               this.templatePath('es5/.babelrc'),
