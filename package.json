@@ -1,6 +1,6 @@
 {
   "name": "generator-configs",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "Yeoman generator for config files",
   "files": [
     "app"
