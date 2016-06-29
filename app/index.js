@@ -35,6 +35,10 @@ module.exports = yo.Base.extend({
         name: 'Git Ingore',
         value: 'includeGit',
         checked: true
+      }, {
+        name: 'Git Attributes',
+        value: 'includeGitAttributes',
+        checked: true
       }]
     }, {
       type: 'list',
@@ -68,6 +72,7 @@ module.exports = yo.Base.extend({
       this.includeScss = hasFeature('includeScss');
       this.includeGulp = hasFeature('includeGulp');
       this.includeGit = hasFeature('includeGit');
+      this.includeGitAttributes = hasFeature('includeGitAttributes');
 
       done();
     }.bind(this));
@@ -88,10 +93,17 @@ module.exports = yo.Base.extend({
         );
       }
 
-      if (this.includeScss) {
+      if (this.includeGit) {
         this.fs.copyTpl(
-          this.templatePath('.scss-lint.yml'),
-          this.destinationPath('.scss-lint.yml')
+          this.templatePath('.gitignore'),
+          this.destinationPath('.gitignore')
+        );
+      }
+
+      if (this.includeGitAttributes) {
+        this.fs.copyTpl(
+          this.templatePath('.gitattributes'),
+          this.destinationPath('.gitattributes')
         );
       }
 
